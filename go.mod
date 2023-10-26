@@ -10,7 +10,7 @@ require (
 	github.com/jackc/pgconn v1.14.1
 	github.com/jackc/pgx/v4 v4.18.1
 	github.com/justinas/nosurf v1.1.1
-	github.com/macketus/niibigo v0.0.0-00010101000000-000000000000
+	github.com/macketus/niibigo v1.0.0
 	github.com/ory/dockertest/v3 v3.10.0
 	github.com/upper/db/v4 v4.6.0
 	golang.org/x/crypto v0.7.0
