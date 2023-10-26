@@ -1,0 +1,32 @@
+BINARY_NAME=niibigoApp.exe
+
+## build: builds all binaries
+build:
+    @go mod vendor
+    @go build -o tmp/${BINARY_NAME} .
+	@echo Niibigo built!
+
+run:
+	@echo Staring Niibigo...
+    @start /min cmd /c tmp\${BINARY_NAME} &
+	@echo Niibigo started!
+
+clean:
+	@echo Cleaning...
+	@DEL ${BINARY_NAME}
+	@go clean
+	@echo Cleaned!
+
+test:
+	@echo Testing...
+	@go test ./...
+	@echo Done!
+
+start: run
+
+stop:
+	@echo "Starting the front end..."
+	@taskkill /IM ${BINARY_NAME} /F
+	@echo Stopped Niibigo
+
+restart: stop start
